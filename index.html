@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Life & Timers Tracker</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/svg+xml" href="fav-icon.svg" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Life Progress Calculator</h1>
+      <p>See how much of your estimated 4000 weeks you have lived.</p>
+
+      <label for="birthdate">Enter your birthdate:</label>
+      <input type="date" id="birthdate" value="2004-03-16" />
+
+      <button onclick="startLiveUpdate()">Start Live Timer</button>
+
+      <div class="result">
+        <p>You have lived <span id="daysLived">0</span> days.</p>
+        <p>Life Progress: <span id="lifePercent">0.000000</span>%</p>
+        <div class="progress-bar">
+          <div class="progress" id="progress"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <h2>Task Timers</h2>
+      <input type="text" id="taskName" placeholder="Enter task name" />
+      <button onclick="addTimer()">Add Timer</button>
+
+      <ul id="timersList"></ul>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
